@@ -1,6 +1,6 @@
-# streamlit_app.py
-
 import streamlit as st
+import streamlit_analytics
 
-# Print results.
-st.write("Just a test")
+with streamlit_analytics.track():
+    st.text_input("Write something")
+    st.button("Click me")
